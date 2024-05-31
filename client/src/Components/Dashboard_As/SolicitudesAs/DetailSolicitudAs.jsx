@@ -15,7 +15,7 @@ const DetailSolicitudAs = () => {
     const { id_solicitud } = useParams();
 
     const getSolicitud = (id_solicitud) => {
-        Axios.get('http://localhost:3002/solicitud_detalle/' + id_solicitud).then((response) => {
+        Axios.get('https://puntos-biolven-backend.onrender.com/solicitud_detalle/' + id_solicitud).then((response) => {
             setAs(response.data[0])
         })
     }
@@ -87,7 +87,7 @@ const DetailSolicitudAs = () => {
                                     </div>
                                 </div>
 
-                                <img src={'http://localhost:3002/uploads/'+dataAs.imagen} alt="" />
+                                <img src={'https://puntos-biolven-backend.onrender.com/uploads/'+dataAs.imagen} alt="" />
 
                             </div>
                         </div>

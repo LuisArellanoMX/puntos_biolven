@@ -31,7 +31,7 @@ const DetailSolicitud = () => {
         formData.append('id_solicitud', id_solicitud);
 
         try {
-            const response = await Axios.post('http://localhost:3002/upload', formData, {
+            const response = await Axios.post('https://puntos-biolven-backend.onrender.com/upload', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -51,7 +51,7 @@ const DetailSolicitud = () => {
 
 
     const getSolicitud = (id_solicitud) => {
-        Axios.get('http://localhost:3002/solicitud_detalle/' + id_solicitud).then((response) => {
+        Axios.get('https://puntos-biolven-backend.onrender.com/solicitud_detalle/' + id_solicitud).then((response) => {
             setAs(response.data[0])
         })
     }

@@ -19,7 +19,7 @@ const DetailAsociado = () => {
     console.log(params, id_asociado);
 
     const getAsociado = (id_asociado) => {
-        Axios.get('http://localhost:3002/asociado/' + id_asociado).then((response) => {
+        Axios.get('https://puntos-biolven-backend.onrender.com/asociado/' + id_asociado).then((response) => {
             setAs(response.data)
         })
     }

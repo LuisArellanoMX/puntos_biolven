@@ -13,7 +13,7 @@ const Body = () => {
   const [sumPunt, setSum] = useState(0)
 
   const get_solicitudes = () => {
-    Axios.get('http://localhost:3002/solicitud/admin').then((response) => {
+    Axios.get('https://puntos-biolven-backend.onrender.com/solicitud/admin').then((response) => {
       setsolicitudesList(response.data);
     })
 

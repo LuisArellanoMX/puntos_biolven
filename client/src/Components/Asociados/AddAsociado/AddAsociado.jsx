@@ -28,7 +28,7 @@ function AddAsociado(props) {
     let txt_btn = "Registrar"
 
     const getAsociado = (id_asociado) => {
-        Axios.get('http://localhost:3002/asociado/' + id_asociado).then((response) => {
+        Axios.get('https://puntos-biolven-backend.onrender.com/asociado/' + id_asociado).then((response) => {
             setAs(response.data)
             setEmail(response.data.email)
             setUserName(response.data.username);
@@ -53,7 +53,7 @@ function AddAsociado(props) {
     const createUpdateAsociado = (e) =>{
         e.preventDefault()
         if(id_asociado == undefined){
-            Axios.post('http://localhost:3002/asociado', {
+            Axios.post('https://puntos-biolven-backend.onrender.com/asociado', {
                 Email: email,
                 UserName: userName,
                 Password: password,
@@ -76,7 +76,7 @@ function AddAsociado(props) {
                 setFactor('');
             })
         }else{
-            Axios.put('http://localhost:3002/asociado/'+id_asociado, {
+            Axios.put('https://puntos-biolven-backend.onrender.com/asociado/'+id_asociado, {
             id: id_asociado,
             Email: email,
             UserName: userName,

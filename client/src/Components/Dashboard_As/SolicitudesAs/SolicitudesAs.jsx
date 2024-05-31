@@ -9,7 +9,7 @@ const SolicitudesAs = () => {
     const [sumPunt, setSum] = useState(0)
 
     const get_solicitudes = () => {
-        Axios.get('http://localhost:3002/solicitud/luis').then((response) => {
+        Axios.get('https://puntos-biolven-backend.onrender.com/solicitud/luis').then((response) => {
             setsolicitudesList(response.data);
         })
 

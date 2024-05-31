@@ -12,7 +12,7 @@ const ListAsociado = () => {
     
 
     const getAsociados = () => {
-        Axios.get('http://localhost:3002/asociado').then((response) => {
+        Axios.get('https://puntos-biolven-backend.onrender.com/asociado').then((response) => {
             setAs(response.data)
         })
     }

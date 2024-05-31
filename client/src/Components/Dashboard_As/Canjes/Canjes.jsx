@@ -16,13 +16,13 @@ const Canjes = () => {
     const usuario = 'luis'
 
     const get_compras = () => {
-        Axios.get('http://localhost:3002/compras_canje/' + usuario).then((response) => {
+        Axios.get('https://puntos-biolven-backend.onrender.com/compras_canje/' + usuario).then((response) => {
             setComprasList(response.data);
         })
     }
 
     const getAsociado = (id_asociado) => {
-        Axios.get('http://localhost:3002/asociado/' + id_asociado).then((response) => {
+        Axios.get('https://puntos-biolven-backend.onrender.com/asociado/' + id_asociado).then((response) => {
             setAs(response.data)
         })
     }
@@ -38,7 +38,7 @@ const Canjes = () => {
             });
         } else {
             let usuario = 'luis'
-            Axios.post('http://localhost:3002/crear_solicitud/' + usuario, {
+            Axios.post('https://puntos-biolven-backend.onrender.com/crear_solicitud/' + usuario, {
                 Usuario: usuario,
                 Puntos: puntosTotales
             }
@@ -56,7 +56,7 @@ const Canjes = () => {
                 console.log(id_ins)
 
                 compras_list.map((val, key) => {
-                    Axios.put('http://localhost:3002/compras/' + val.id_compra, {
+                    Axios.put('https://puntos-biolven-backend.onrender.com/compras/' + val.id_compra, {
                         id_solicitud: id_ins
                     }
                     ).then((res) => {
