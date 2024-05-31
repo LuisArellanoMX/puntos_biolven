@@ -50,7 +50,7 @@ const Canjes = () => {
                     icon: 'success',
                     confirmButtonText: 'OK'
                   }).then(()=>{
-                    window.location.reload();
+                    //window.location.reload();
                   });
                 let id_ins = response.data.id_inserted
                 console.log(id_ins)
