@@ -13,7 +13,7 @@ const Canjes = () => {
     const [dataAs, setAs] = useState([])
     const [idInserted, setIdInserted] = useState(0)
     let puntosTotales = 0;
-    const usuario = 'luis'
+    let usuario = 'luis'
 
     const get_compras = () => {
         Axios.get('https://puntos-biolven-backend.onrender.com/compras_canje/' + usuario).then((response) => {
@@ -70,6 +70,8 @@ const Canjes = () => {
     const asignar_compras = () => {  }
 
     useEffect(() => {
+        puntosTotales = 0;
+        usuario = 'luis'
         get_compras()
         getAsociado(13)
     }, [])
